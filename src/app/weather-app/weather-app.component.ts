@@ -43,7 +43,8 @@ export class WeatherAppComponent implements OnInit {
   public getDataByName(){
     this.a=false;
     this.service.getlinks(this.name).subscribe(
-      (resp) => 
+      (resp) => {
+     
         let sunsetTime = new Date(resp['sys']['sunset']*1000)
         this.sunset_time = sunsetTime.toLocaleTimeString();
         let currentDate = new Date();
@@ -54,7 +55,10 @@ export class WeatherAppComponent implements OnInit {
         this.WeatherData_temp_feels_like = (resp['main']['feels_like'] -273.15).toFixed(0);
         this.city_name = resp['name'];
         this.humidity = resp['main']['humidity'];
-        let data = this.humidity    
+        this.weather_description = resp['weather'][0]['description'];
+        let data = this.humidity ;
+        
+      
       });
      
 }
@@ -70,6 +74,7 @@ WeatherData_temp_max1:any;
 WeatherData_temp_feels_like1:any;
 city_name1:any; 
 humidity1:any;
+weather_description1:any;
 public getDataByName1(){
   this.b=false;
   this.service.getlinks1(this.name1).subscribe(
@@ -84,6 +89,7 @@ public getDataByName1(){
       this.WeatherData_temp_feels_like1 = (resp['main']['feels_like'] -273.15).toFixed(0);
       this.city_name1 = resp['name'];
       this.humidity1 = resp['main']['humidity'];
+      this.weather_description1 = resp['weather'][0]['description'];
     });
 }
 
@@ -102,6 +108,7 @@ WeatherData_temp_max12:any;
 WeatherData_temp_feels_like12:any;
 city_name12:any; 
 humidity12:any;
+weather_description12:any;
 public getDataByName12(){
   this.c=false;
   this.service.getlinks12(this.name12).subscribe(
@@ -116,6 +123,7 @@ public getDataByName12(){
       this.WeatherData_temp_feels_like12 = (resp['main']['feels_like'] -273.15).toFixed(0);
       this.city_name12 = resp['name'];
       this.humidity12 = resp['main']['humidity'];
+      this.weather_description12 = resp['weather'][0]['description'];
     });
 }
 
@@ -135,6 +143,7 @@ WeatherData_temp_max13:any;
 WeatherData_temp_feels_like13:any;
 city_name13:any; 
 humidity13:any;
+weather_description13:any;
 public getDataByName13(){
   this.d=false;
   this.service.getlinks13(this.name13).subscribe(
@@ -149,6 +158,7 @@ public getDataByName13(){
       this.WeatherData_temp_feels_like13 = (resp['main']['feels_like'] -273.15).toFixed(0);
       this.city_name13 = resp['name'];
       this.humidity13 = resp['main']['humidity'];
+      this.weather_description13 = resp['weather'][0]['description'];
     });
 }
 
@@ -168,6 +178,7 @@ WeatherData_temp_max14:any;
 WeatherData_temp_feels_like14:any;
 city_name14:any; 
 humidity14:any;
+weather_description14:any;
 public getDataByName14(){
   this.e=false;
   this.service.getlinks14(this.name14).subscribe(
@@ -182,6 +193,7 @@ public getDataByName14(){
       this.WeatherData_temp_feels_like14 = (resp['main']['feels_like'] -273.15).toFixed(0);
       this.city_name14 = resp['name'];
       this.humidity14 = resp['main']['humidity'];
+      this.weather_description14 = resp['weather'][0]['description'];
     });
 }
   // 5th end 
@@ -199,6 +211,7 @@ public getDataByName14(){
   WeatherData_temp_feels_like15:any;
   city_name15:any; 
   humidity15:any;
+  weather_description15:any;
   public getDataByName15(){
     this.f=false;
     this.service.getlinks15(this.name15).subscribe(
@@ -213,6 +226,7 @@ public getDataByName14(){
         this.WeatherData_temp_feels_like15 = (resp['main']['feels_like'] -273.15).toFixed(0);
         this.city_name15 = resp['name'];
         this.humidity15 = resp['main']['humidity'];
+        this.weather_description15 = resp['weather'][0]['description'];
       });
   }
 
@@ -235,14 +249,5 @@ public getDataByName14(){
 
 
 
-
-
-  // name : string = "london";    tried with this getting data 
-//  public getDataByName(){
-//     this.service.getlinks(this.name).subscribe((resp)=>{
-//       this.temp = resp;
-//         console.log(this.temp);
-//     });
-//   }
 
 
