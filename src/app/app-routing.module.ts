@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-const routes: Routes = [];
+import { WeatherAppComponent } from "./weather-app/weather-app.component";
+const routes: Routes = [
+  { path: '', redirectTo: 'app', pathMatch: 'full' },
+  { path: 'main', component: WeatherAppComponent },
+  { path: '**', component: WeatherAppComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

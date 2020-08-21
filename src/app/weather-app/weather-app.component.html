@@ -1,0 +1,144 @@
+<div *ngIf="a"><input type="text" [(ngModel)]="name" matInput placeholder=" City Name" name="name" id=name required>
+    <span><button (click)="getDataByName()">get</button></span>
+</div>
+<button (click)="box1()" id="pad">
+<div id="divWeatherMain">
+    <div *ngIf="isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>
+    </div>
+    <div class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud"></i>
+    </div>
+    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData_temp_celcius}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData_temp_min}}° / {{WeatherData_temp_max}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData_temp_feels_like}}°</div>
+    <div *ngIf = "visible" class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{error}}</div>
+    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{city_name}}</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{humidity}}%</div> 
+</div>
+</button>
+
+<!-- 2nd start -->
+
+<div *ngIf="b"><input type="text" [(ngModel)]="name1" matInput placeholder=" City Name" name="name" id=name required>
+    <span><button (click)="getDataByName1()">get</button></span>
+</div>
+<button (click)="box2()">
+<div id="divWeatherMain">
+    <div *ngIf="isDay1" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>
+    </div>
+    <div *ngIf="!isDay1" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>
+    </div>
+    <div class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud"></i>
+    </div>
+    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData_temp_celcius1}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData_temp_min1}}° / {{WeatherData_temp_max1}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData_temp_feels_like1}}°</div>
+    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{city_name1}}</div>
+    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{humidity1}}%</div> 
+</div>
+</button>
+
+<!-- 3rd start -->
+
+
+<div *ngIf="c"><input type="text" [(ngModel)]="name12" matInput placeholder=" City Name" name="name" id=name required>
+    <span><button (click)="getDataByName12()">get</button></span>
+</div>
+<button (click)="box3()">
+    <div id="divWeatherMain">
+        <div *ngIf="isDay12" class="weatherWidgetRow">
+            <i class="fas fa-3x fa-sun sun"></i>
+        </div>
+        <div *ngIf="!isDay12" class="weatherWidgetRow">
+            <i class="fas fa-3x fa-moon moon"></i>
+        </div>
+        <div class="weatherWidgetRow cloudDiv">
+            <i class="fas fa-cloud fa-3x cloud"></i>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData_temp_celcius12}}°</div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData_temp_min12}}° / {{WeatherData_temp_max12}}°</div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData_temp_feels_like12}}°</div>
+        <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{city_name12}}</div>
+        <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{humidity12}}%</div>
+    </div>
+    </button>
+
+<!-- 4th start -->
+
+<div *ngIf="d"><input type="text" [(ngModel)]="name13" matInput placeholder=" City Name" name="name" id=name required>
+    <span><button (click)="getDataByName13()">get</button></span>
+</div>
+<button (click)="box4()">
+        <div id="divWeatherMain">
+            <div *ngIf="isDay13" class="weatherWidgetRow">
+                <i class="fas fa-3x fa-sun sun"></i>
+            </div>
+            <div *ngIf="!isDay13" class="weatherWidgetRow">
+                <i class="fas fa-3x fa-moon moon"></i>
+            </div>
+            <div class="weatherWidgetRow cloudDiv">
+                <i class="fas fa-cloud fa-3x cloud"></i>
+            </div>
+            <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData_temp_celcius13}}°</div>
+            <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData_temp_min13}}° / {{WeatherData_temp_max13}}°</div>
+            <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData_temp_feels_like13}}°</div>
+            <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{city_name13}}</div>
+            <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{humidity13}}%</div>
+        </div>
+        </button>
+
+<!-- 5th start -->
+
+<div *ngIf="e"><input type="text" [(ngModel)]="name14" matInput placeholder=" City Name" name="name" id=name required>
+    <span><button (click)="getDataByName14()">get</button></span>
+</div>
+<button (click)="box5()">
+            <div id="divWeatherMain">
+                <div *ngIf="isDay14" class="weatherWidgetRow">
+                    <i class="fas fa-3x fa-sun sun"></i>
+                </div>
+                <div *ngIf="!isDay14" class="weatherWidgetRow">
+                    <i class="fas fa-3x fa-moon moon"></i>
+                </div>
+                <div class="weatherWidgetRow cloudDiv">
+                    <i class="fas fa-cloud fa-3x cloud"></i>
+                </div>
+                <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData_temp_celcius14}}°</div>
+                <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData_temp_min14}}° / {{WeatherData_temp_max14}}°</div>
+                <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData_temp_feels_like14}}°</div>
+                <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{city_name14}}</div>
+                <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{humidity14}}%</div>
+            </div>
+            </button>
+
+
+<!-- 6th start -->
+
+<div *ngIf="f"><input type="text" [(ngModel)]="name15" matInput placeholder=" City Name" name="name" id=name required>
+    <span><button (click)="getDataByName15()">get</button></span>
+</div>
+<button (click)="box6()">
+                <div id="divWeatherMain">
+                    <div *ngIf="isDay15" class="weatherWidgetRow">
+                        <i class="fas fa-3x fa-sun sun"></i>
+                    </div>
+                    <div *ngIf="!isDay15" class="weatherWidgetRow">
+                        <i class="fas fa-3x fa-moon moon"></i>
+                    </div>
+                    <div class="weatherWidgetRow cloudDiv">
+                        <i class="fas fa-cloud fa-3x cloud"></i>
+                    </div>
+                    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{WeatherData_temp_celcius15}}°</div>
+                    <div class="weatherWidgetRow" style="font-size: 12px;">{{WeatherData_temp_min15}}° / {{WeatherData_temp_max15}}°</div>
+                    <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like: {{WeatherData_temp_feels_like15}}°</div>
+                    <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{city_name15}}</div>
+                    <div class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{humidity15}}%</div>
+                </div>
+                </button>
