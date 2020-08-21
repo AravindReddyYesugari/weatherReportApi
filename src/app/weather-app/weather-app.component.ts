@@ -43,9 +43,7 @@ export class WeatherAppComponent implements OnInit {
   public getDataByName(){
     this.a=false;
     this.service.getlinks(this.name).subscribe(
-      (resp) => {
-        var info = resp;
-        if(info.status == true){
+      (resp) => 
         let sunsetTime = new Date(resp['sys']['sunset']*1000)
         this.sunset_time = sunsetTime.toLocaleTimeString();
         let currentDate = new Date();
@@ -56,12 +54,7 @@ export class WeatherAppComponent implements OnInit {
         this.WeatherData_temp_feels_like = (resp['main']['feels_like'] -273.15).toFixed(0);
         this.city_name = resp['name'];
         this.humidity = resp['main']['humidity'];
-        let data = this.humidity ;
-        }
-        else{
-          this.visible = true;
-            this.error="area not found";
-        }
+        let data = this.humidity    
       });
      
 }
